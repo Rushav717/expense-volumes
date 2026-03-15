@@ -87,7 +87,7 @@ spec: #replica set
         ports:
         - containerPort: 80
         volumeMounts:
-        - name: nginx-config-volume
+        - name: nginx
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf 
           readOnly: true
