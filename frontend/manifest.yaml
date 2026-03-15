@@ -88,6 +88,13 @@ spec: #replica set
       containers:
       - name: nginx
         image: rushhav717/frontend:1.0.0
+        resources:  
+        requests:  #soft limit
+          memory: "68Mi"
+          cpu: "100m"
+        limits:   #hard limit
+          memory: "128Mi"
+          cpu: "150m"
         ports:
         - containerPort: 80
         volumeMounts:
